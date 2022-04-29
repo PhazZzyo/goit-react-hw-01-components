@@ -1,6 +1,7 @@
 const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
     <div class="profile">
+      <h2>Task 01 - Social network profile</h2>
       <div class="description">
         <img src={avatar} alt="User avatar" class="avatar" />
         <p class="name">{username}</p>

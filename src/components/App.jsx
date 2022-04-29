@@ -1,19 +1,15 @@
-import Profile from './social-profile/Profile';
-import './social-profile/Profile.css';
-import user from './user.json';
+import ProfileCard from './Profile/ProfileCard';
+import './Profile/Profile.css';
+import userData from '../data/user.json';
+import StatisticsList from './Statistics/StatisticsList';
+import statsData from '../data/stats.json';
 
 export const App = () => {
   return (
     <div>
       <h1>React homework 01 - components</h1>
-      <h2>Task 01 - Social network profile</h2>
-      <Profile
-        username={user.username}
-        tag={user.tag}
-        location={user.location}
-        avatar={user.avatar}
-        stats={user.stats}
-      />
+      <ProfileCard data={userData} />
+      <StatisticsList data={statsData} />
     </div>
   );
 };
