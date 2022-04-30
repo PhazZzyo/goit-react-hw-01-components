@@ -1,22 +1,30 @@
-import Statistics from './Statistics';
+import PropTypes from 'prop-types';
 
-function StatisticsList({ datas }) {
+const StatisticsList = ({ title, stats }) => {
   return (
     <section class="statistics">
-      <h2 class="title">Upload stats</h2>
+      {title && <h2 class="title">{title}</h2>}
       <ul class="stat-list">
-        {datas.map(data => (
-          <li key={data.id}>
-            <Statistics
-              id={data.id}
-              label={data.label}
-              percentage={data.percentage}
-            />
+        {stats.map(({ id, label, percentage }) => (
+          <li key={id} class="item">
+            <span class="label">{label}</span>
+            <span class="percentage">{percentage}%</span>
           </li>
         ))}
       </ul>
     </section>
   );
-}
+};
+
+StatisticsList.propTypes = {
+  title: PropTypes.string,
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    })
+  ),
+};
 
 export default StatisticsList;
