@@ -1,0 +1,41 @@
+table,
+th,
+td {
+  outline: dashed 1px black;
+}
+
+th,
+td {
+  width: 200px;
+}
+
+.TransactionContainer {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.transactionTable {
+  font-size: 24px;
+}
+
+.transactionTableTop {
+  background: rgb(73, 171, 252);
+}
+
+/* .type {
+    padding:  10px  10px  10px 100px;
+    width: 200px;
+    text-align: left;
+}
+
+.amount {
+    padding:  10px  10px  10px 0px;
+    width: 200px;    
+}
+
+.currency {
+    padding:  10px  10px  10px 0px;
+    width: 200px;
+} */

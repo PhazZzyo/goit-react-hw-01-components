@@ -3,19 +3,19 @@ import style from '../TransactionHistory/TransactionHistory.module.css';
 
 const TransactionHistory = ({ items }) => {
   return (
-    <div className={style.TransactionHistory}>
+    <div className={style.TransactionContainer}>
       <h2 className={style.title}>Transaction history</h2>
-      <table class="transaction-history">
+      <table className={style.transactionTable}>
         <thead>
-          <tr>
+          <tr className={style.transactionTableTop}>
             <th>Type</th>
             <th>Amount</th>
             <th>Currency</th>
           </tr>
         </thead>
         {items.map(({ id, type, amount, currency }) => (
-          <tbody>
-            <tr key={id} className={style.row}>
+          <tbody key={id}>
+            <tr className={style.row}>
               <td className={style.type}>{type}</td>
               <td className={style.amount}>{amount}</td>
               <td className={style.currency}>{currency}</td>
