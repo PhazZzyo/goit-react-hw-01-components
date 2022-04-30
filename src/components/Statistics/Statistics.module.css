@@ -1,0 +1,22 @@
+.statistics {
+  width: 250px;
+  background: #fff;
+}
+
+.statList {
+  display: flex;
+  width: 100%;
+  list-style: none;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 5px 0;
+}
+
+.item:not(:last-child) {
+  border-right: 1px solid #000;
+}
