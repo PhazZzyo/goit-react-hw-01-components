@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { setBg } from '../../tools/randomColor';
 import style from '../Statistics/Statistics.module.css';
 
 const StatisticsList = ({ title, stats }) => {
@@ -7,7 +8,13 @@ const StatisticsList = ({ title, stats }) => {
       {title && <h2 className={style.title}>{title}</h2>}
       <ul className={style.statList}>
         {stats.map(({ id, label, percentage }) => (
-          <li key={id} className={style.item}>
+          <li
+            key={id}
+            className={style.item}
+            style={{
+              backgroundColor: setBg(),
+            }}
+          >
             <span className={style.label}>{label}</span>
             <span className={style.percentage}>{percentage}%</span>
           </li>
