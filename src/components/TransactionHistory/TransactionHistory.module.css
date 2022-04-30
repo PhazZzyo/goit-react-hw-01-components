@@ -2,7 +2,8 @@ table,
 th,
 td {
   font-size: 18px;
-  outline: dashed 1px black;
+  outline: solid 1px rgb(223, 219, 219);
+  border-collapse: collapse;
 }
 
 th,
@@ -14,6 +15,14 @@ td {
 th {
   background-color: #48c496;
   color: white;
+}
+
+tr:nth-last-child(odd) {
+  background-color: #99ddc4;
+}
+
+tr:hover {
+  background-color: #48c496;
 }
 
 .TransactionContainer {

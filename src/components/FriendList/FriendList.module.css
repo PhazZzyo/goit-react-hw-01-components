@@ -3,6 +3,10 @@ p {
   text-align: left;
 }
 
+li:hover {
+  background-color: #e9f5be;
+}
+
 .friendListContainer {
   padding: 15px;
   display: flex;
