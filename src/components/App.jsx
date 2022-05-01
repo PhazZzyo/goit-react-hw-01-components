@@ -1,5 +1,5 @@
-import ProfileCard from './Profile/ProfileCard';
-import userData from '../data/user.json';
+import Profile from './Profile/Profile';
+import user from '../data/user.json';
 
 import StatisticsList from './Statistics/StatisticsList';
 import statsData from '../data/stats.json';
@@ -14,7 +14,13 @@ export const App = () => {
   return (
     <div>
       <h1>React homework 01 - components</h1>
-      <ProfileCard data={userData} />
+      <Profile
+        username={user.username}
+        tag={user.tag}
+        location={user.location}
+        avatar={user.avatar}
+        stats={user.stats}
+      />
       <StatisticsList title="Upload stats" stats={statsData} />
       <FriendList friends={friendsData} />
       <TransactionHistory items={transactions} />;
