@@ -7,12 +7,14 @@ function FriendList({ friends }) {
       <h2 className={style.title}>Friend list</h2>
       <ul className={style.friendList}>
         {friends.map(({ avatar, name, isOnline, id }) => (
-          <FriendListItem
-            avatar={avatar}
-            name={name}
-            isOnline={isOnline}
-            id={id}
-          />
+          <li key={id}>
+            <FriendListItem
+              avatar={avatar}
+              name={name}
+              isOnline={isOnline}
+              id={id}
+            />
+          </li>
         ))}
       </ul>
     </div>
